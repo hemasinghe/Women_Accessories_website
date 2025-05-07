@@ -1,0 +1,150 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box; /* Includes padding and border in the element's width and height */
+}
+body {
+    background-color: #F5CAC3; /* Pink background */
+}
+
+.jewel{
+
+background-color:#F5CAC3;
+font-family:"Times New Roman";
+    width: 100%; /* Ensure it takes up the full width */
+    padding: 0; /* Remove any padding if not needed */
+    margin: 0;
+}
+
+.jewel input,.description input{
+background-color:#F28482;
+background:flex;
+height:20px;
+width:100px;
+BORDER-radius:100px;
+border:0;
+font-family:"Monaco",sans-serif;
+font-weight:bold;
+}
+
+.jewel input:hover,.description input:hover{
+background-color:#F7EDE2;
+}
+ 
+.jewel table{
+border-spacing:10px;
+
+}
+
+.description table{
+border-spacing:70px;
+background-color:#F7EDE2;
+}
+
+.description input:hover{
+background-color:#F5CAC3;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 10px;
+    color: #333;
+    background: rgba(247, 238, 225, 0.9); /* Optional: semi-transparent background */
+}
+
+.logo img {
+    height: 100px; /* Adjust the size as needed */
+    width: 400px;  /* Maintain aspect ratio */
+}
+
+.nav-center {
+    flex-grow: 1; /* This will make the nav links section take up available space */
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px; /* Space between the navigation links */
+}
+
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin: 0 10px;
+}
+
+.navbar .nav-links li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px; /* Add padding for a box-like effect */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar .nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Less transparent white background on hover */
+    color: #73918a; /* Change text color on hover to match the primary color */
+    border-radius: 0px; /* Optional: Add rounded corners */
+}
+
+.navbar .cart-icon {
+    font-size: 1.2em;
+}
+
+.navbar .cart-icon a {
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-icon {
+    display: block;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 200px;
+    background-color: #F5CAC3; /* Background color for the sidebar */
+    position: fixed;
+    top: 60px; /* Adjust according to navbar height */
+    bottom: 0;
+    left: -200px; /* Hide the sidebar by default */
+    padding: 10px;
+    transition: left 0.3s ease;
+}
+
+.sidebar.active {
+    left: 0; /* Show the sidebar when active */
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+

@@ -1,0 +1,416 @@
+/* Reset some default browser styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:"Times New Roman";
+    background-color: #F7EDE2; /* Background color for the body */
+}
+
+@font-face {
+    font-family: 'Scriptina';
+    src:  url('scriptina/SCRIPTIN.ttf') format('truetype'),
+    font-weight: 900;
+    font-style: normal;
+}
+
+h1  {
+    text-align: center;
+    font-family: 'Scriptina', cursive; /* Use Scriptina for h1 */
+    color: #F28482; /* Optional: Set the color to match your theme */
+    font-size: 2.5em; /* Adjust the font size as needed */
+    font-weight: 500; /* Use normal weight for Scriptina */
+    margin: 20px 0; /* Adjust margin for spacing */
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Scriptina', cursive; /* Use Scriptina for h1 */
+    color: #333; /* Optional: Set the color to match your theme */
+    font-size: 1.7em; /* Adjust the font size as needed */
+    font-weight: 500; /* Use normal weight for Scriptina */
+    margin: 20px 0; /* Adjust margin for spacing */
+}
+
+
+h2 {
+    font-family: 'Georgia', 'Times New Roman', 'Garamond', serif; /* Serif fonts for H2 */
+    color: #84A59D; /* Accent color for subheadings */
+}
+
+
+
+
+p, li, a {
+    font-family:"Times New Roman"; /* Sans-serif font for paragraphs, list items, and links */
+    color: #333; /* Default text color */
+}
+
+.header {
+    background-image: url("Head.jpg"); /* Use a relative path */
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Adjust the height as needed */
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+font-family:"Times New Roman";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 10px;
+    color: #333;
+    background: rgba(247, 238, 225, 0.9); /* Optional: semi-transparent background */
+}
+
+.logo img {
+    height: 100px; /* Adjust the size as needed */
+    width: 400px;  /* Maintain aspect ratio */
+}
+
+.nav-center {
+    flex-grow: 1; /* This will make the nav links section take up available space */
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px; /* Space between the navigation links */
+}
+
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin: 0 10px;
+}
+
+.navbar .nav-links li a {
+
+    font-family:"Times New Roman"
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px; /* Add padding for a box-like effect */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar .nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Less transparent white background on hover */
+    color: #73918a; /* Change text color on hover to match the primary color */
+    border-radius: 0px; /* Optional: Add rounded corners */
+}
+
+.navbar .cart-icon {
+    font-size: 1.2em;
+}
+
+.navbar .cart-icon a {
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-icon {
+    display: block;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 200px;
+    background-color: #F5CAC3; /* Background color for the sidebar */
+    position: fixed;
+    top: 60px; /* Adjust according to navbar height */
+    bottom: 0;
+    left: -200px; /* Hide the sidebar by default */
+    padding: 10px;
+    transition: left 0.3s ease;
+}
+
+.sidebar.active {
+    left: 0; /* Show the sidebar when active */
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-box {
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
+    padding: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Fixed width */
+    height: 500px; /* Fixed height */
+    overflow: hidden; /* Ensures content does not overflow */
+    text-overflow: ellipsis;
+}
+
+.text-box h2 {
+    margin-top: 0;
+}
+
+.text-box p {
+    margin: 0;
+    font-family: 'Georgia', serif; /* Use a stylish serif font */
+    font-size: 14px; /* Font size adjusted for readability */
+    color: #333; /* Dark color for good contrast */
+    line-height: 1.5;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-container {
+    flex: 1;
+    margin: 0 10px;
+    overflow: hidden; /* Ensures images fit within their containers */
+    height: 300px; /* Set the desired height */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images maintain aspect ratio while covering the container */
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    
+    font-family: 'Lora', serif;
+    color: #566b67;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+    }
+}
+
+/* Unique styling for the specific row of images */
+.productsimage-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.productsimage {
+    width: 30%; /* Ensures each fieldset takes up equal width */
+    border-radius: 0; /* No curved edges */
+    padding: 10px;
+    margin: 0 0; /* Adds spacing between the fieldsets */
+    box-shadow: 0 4px 8px rgba(51,51,51, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productsimage legend {
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 1em;
+    text-align: left;
+
+}
+
+.productsimage-link {
+    display: block;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productsimage img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for consistency */
+    object-fit: cover;
+    border-radius: 10px; 
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for image pop-up and glow */
+.productsimage-link:hover {
+    transform: scale(1.05); /* Pop-up effect */
+    box-shadow: 0 8px 16px rgba(245, 202, 195, 0.3); /* Glow effect */
+}
+
+.productsimage-link:hover img {
+    transform: scale(1.1); /* Slightly zooms in on the image */
+}
+
+footer {
+    background-color: rgba(132, 165, 157, 0.5);
+    color: #333;
+    padding: 0px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 20px; 
+    font-size: 14px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+.footer-section ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-map {
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.footer-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.text {
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 12px;
+    
+}
+
+
+.mail{
+   color:#333;
+}
+
+.contact-img {
+     /* Transparent border */
+    border-radius: 50%; /* Make it circular */
+    padding: 5px; /* Padding inside the border */
+    width: 150px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+    object-fit: cover; /* Maintain aspect ratio */
+    display: block; /* Ensure it behaves as a block element */
+    margin: 10px auto; /* Center align and add margin */
+}
+.social-media-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media-list li {
+    margin: 0 10px;
+}
+.social-media-list a {
+    text-decoration: under-line; /* Remove underline from links */
+    font-family: Georgia, serif;
+color:#836029; /* Change the link color */
+    font-size: 15px;
+}
+
+.social-media-list li a img {
+    width: 25px; /* Adjust size of social media icons */
+    height: 25px;
+    border-radius: 20%; /* Make them circular */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.social-media-list li a img:hover {
+    transform: scale(1.2); /* Scale up the icon on hover */
+}
