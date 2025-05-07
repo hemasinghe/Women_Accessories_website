@@ -1,4 +1,4 @@
-# About Page Website
+# Women Accessories Website
 
 This is the "Women Accessories" page of a sample company website, developed using HTML, CSS, and PHP.  
 It demonstrates front-end structure along with server-side logic and database integration using MySQL.
